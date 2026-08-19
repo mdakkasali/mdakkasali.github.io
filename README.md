@@ -1,10 +1,12 @@
 # MD Akkas Ali — Academic Website
 
+A responsive academic portfolio designed for GitHub Pages, with locally hosted professional photographs, a dedicated gallery, and selected publications.
+
 ## Content scope
 
-- The biosketch is the authority for positions, awards, presentations, and selected publications.
+- The September 2025 AHA biosketch is the authority for positions, awards, presentations, and selected publications.
 - Only published findings and public conference abstracts are described.
-- Portrait and award images are temporarily referenced from the existing Google Site and should later be replaced with optimized local originals.
+- The professional portrait supplied by MD Akkas Ali and selected public professional photographs from the existing Google Site are stored locally in the `images` folder for reliable display.
 
 ## Preview locally
 
