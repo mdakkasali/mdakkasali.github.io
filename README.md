@@ -4,7 +4,7 @@ A responsive academic portfolio designed for GitHub Pages.
 
 ## Content scope
 
-- The September 2025 AHA biosketch is the authority for positions, awards, presentations, and selected publications.
+- The biosketch is the authority for positions, awards, presentations, and selected publications.
 - Only published findings and public conference abstracts are described.
 - Portrait and award images are temporarily referenced from the existing Google Site and should later be replaced with optimized local originals.
 
