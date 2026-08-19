@@ -1,7 +1,5 @@
 # MD Akkas Ali — Academic Website
 
-A responsive academic portfolio designed for GitHub Pages.
-
 ## Content scope
 
 - The biosketch is the authority for positions, awards, presentations, and selected publications.
