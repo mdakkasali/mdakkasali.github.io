@@ -1,6 +1,6 @@
 :root {
   --ink: #10251e;
-  --muted: #5f6f69;
+  --muted: #556760;
   --paper: #f8f6f0;
   --white: #ffffff;
   --green: #0a5c42;
@@ -16,6 +16,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+:target, section[id] { scroll-margin-top: 96px; }
 body {
   margin: 0;
   background: var(--paper);
@@ -131,6 +132,7 @@ h3 { line-height: 1.25; }
 .publication p { margin-bottom: 8px; color: var(--muted); }
 .publication .pub-type { margin-bottom: 8px; color: var(--green); }
 .publication a { color: var(--green); font-size: .88rem; font-weight: 700; text-underline-offset: 4px; }
+.pub-note { margin-bottom: 8px; color: var(--muted); font-size: .82rem; font-style: italic; }
 .latest-badge { display: inline-flex; margin-right: 10px; padding: 5px 9px; border-radius: 999px; background: var(--green); color: var(--white); font-size: .67rem; letter-spacing: .08em; }
 
 .gallery-section { background: var(--white); }
@@ -187,11 +189,11 @@ h3 { line-height: 1.25; }
 .footer-inner p { margin: 0; font-size: .82rem; }
 .footer-inner a { font-size: .82rem; }
 
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+.js .reveal.visible { opacity: 1; transform: translateY(0); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
   .button { transition: none; }
 }
 
@@ -199,8 +201,8 @@ h3 { line-height: 1.25; }
   :root { --shell: min(100% - 32px, 760px); }
   .hero-grid, .two-column, .recognition-grid, .contact-grid { grid-template-columns: 1fr; }
   .hero-grid { gap: 60px; }
-  .hero-copy { order: 1; }
-  .portrait-wrap { order: 0; max-width: 360px; }
+  .hero-copy { order: 0; }
+  .portrait-wrap { order: 1; max-width: 360px; }
   .portrait { height: 520px; }
   .portrait-note { right: -10px; }
   .signal-grid { grid-template-columns: 1fr 1fr; }
