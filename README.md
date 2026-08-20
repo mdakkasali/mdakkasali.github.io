@@ -1,34 +1,52 @@
-# Md Akkas Ali — Academic Website
+# mdakkasali.github.io
 
-A responsive academic portfolio designed for GitHub Pages, with locally hosted professional photographs, a dedicated gallery, and selected publications.
+Source for my academic website: **https://mdakkasali.github.io/**
 
-## Content scope
+A single-page site covering my research in neuroimmunology, brain aging, and
+vascular cognitive impairment, with selected publications, presentations, news,
+and a photo gallery. Hand-written HTML and CSS with a small amount of
+JavaScript — no build step, no framework, no dependencies.
 
-- The September 2025 AHA biosketch is the authority for positions, awards, presentations, and selected publications.
-- Only published findings and public conference abstracts are described.
-- The professional portrait supplied by Md Akkas Ali and selected public professional photographs from the existing Google Site are stored locally in the `images` folder for reliable display.
+## Structure
 
-## Preview locally
+| File | Purpose |
+|---|---|
+| `index.html` | The entire page: content, structured data, meta tags |
+| `styles.css` | All styling, including the responsive breakpoints |
+| `script.js` | Mobile menu, scroll reveal, footer year |
+| `images/` | Photographs and the social link-preview card |
+| `robots.txt`, `sitemap.xml` | Search engine directives |
+| `favicon.svg`, `apple-touch-icon.png` | Site icons |
+
+## Local preview
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000` from this directory.
+Then open http://localhost:8000.
 
-## Publish with GitHub Pages
+Changes are live on https://mdakkasali.github.io/ about a minute after a push
+to `main`. Filenames stay stable across updates, so hard-refresh
+(<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>) when checking a change.
 
-1. Create a public repository named `mdakkasali.github.io`.
-2. Add these files to the repository's default branch.
-3. Open **Settings → Pages**.
-4. Select **Deploy from a branch**, then select the default branch and `/ (root)`.
-5. The site will appear at `https://mdakkasali.github.io/`.
+## Updating content
 
-## Replace images
+**Publications and presentations** are curated, not generated. Verify author
+lists and DOIs against the published record — the Crossref API
+(`https://api.crossref.org/works/<DOI>`) returns the authoritative byline —
+rather than copying from a CV or profile page, which drift.
 
-Place optimized images under `images/` and update their `src` values in `index.html`.
-Keep the `width` and `height` attributes in sync with each file's real pixel size so the
-browser reserves the right space while the page loads.
+**Images** go in `images/`. Keep each `<img>` tag's `width` and `height`
+attributes matching the file's real pixel dimensions so the browser reserves
+the correct space while loading. Save photographs without chroma subsampling;
+the default softens fine detail and mottles out-of-focus backgrounds.
 
-`images/og-card.jpg` (1200x630) is the link-preview card used by the Open Graph and
-Twitter meta tags. Regenerate it if the portrait or titles change.
+**`images/og-card.jpg`** (1200×630) is the preview card shown when the URL is
+shared on LinkedIn, X, or Slack. Regenerate it if the portrait or titles
+change, and re-run the URL through each platform's cache validator afterwards.
+
+**Accessibility and robustness** are load-bearing, not decoration: the reveal
+animation is gated behind a `js` class so the page stays readable without
+JavaScript, and body text meets WCAG AA contrast against every background it
+sits on. Preserve both when editing.
