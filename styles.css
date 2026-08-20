@@ -111,6 +111,10 @@ h3 { line-height: 1.25; }
 .publication-summary { max-width: 690px; margin: 16px 0 0; color: var(--muted); }
 .text-link { color: var(--green); font-weight: 700; text-underline-offset: 5px; }
 
+.research-figure { margin: 0 0 22px; overflow: hidden; border-radius: var(--radius); box-shadow: 0 16px 42px rgba(10, 54, 40, .14); }
+.research-figure img { width: 100%; height: auto; background: #000; }
+.research-figure figcaption { padding: 22px 26px; background: var(--green-dark); color: rgba(255, 255, 255, .78); font-size: .9rem; line-height: 1.55; }
+.research-figure figcaption strong { display: block; margin-bottom: 6px; color: var(--lime); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .research-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 .research-card { position: relative; min-height: 330px; padding: 38px; border-radius: var(--radius); background: rgba(255, 255, 255, .68); border: 1px solid rgba(10, 92, 66, .12); }
 .research-card.featured { grid-column: span 2; display: grid; grid-template-columns: 90px 1fr; min-height: auto; background: var(--green-dark); color: var(--white); }
@@ -239,6 +243,7 @@ h3 { line-height: 1.25; }
   .signal-grid, .research-grid { grid-template-columns: 1fr; }
   .research-card.featured { grid-column: auto; grid-template-columns: 1fr; }
   .research-card { min-height: auto; padding: 30px; }
+  .research-figure figcaption { padding: 18px 20px; }
   .heading-row { display: block; }
   .heading-row .text-link { display: inline-block; margin-top: 20px; }
   .publication { grid-template-columns: 1fr; gap: 8px; }
