@@ -1,52 +1,33 @@
 # mdakkasali.github.io
 
-Source for my academic website: **https://mdakkasali.github.io/**
+My academic site: **https://mdakkasali.github.io/**
 
-A single-page site covering my research in neuroimmunology, brain aging, and
-vascular cognitive impairment, with selected publications, presentations, news,
-and a photo gallery. Hand-written HTML and CSS with a small amount of
-JavaScript — no build step, no framework, no dependencies.
+I moved here from a Google Site. Every Google Site looks like a Google Site, and I
+kept running into things the builder would not let me change. I wanted to lay out
+my own pages, have an address I could put on a poster without having to explain it,
+and keep the source in git where every change is tracked and reversible.
 
-## Structure
+It is plain HTML and CSS with about thirty lines of JavaScript. No framework, no
+build step. If I open this again in three years I want to read `index.html` and
+understand it straight away.
 
-| File | Purpose |
-|---|---|
-| `index.html` | The entire page: content, structured data, meta tags |
-| `styles.css` | All styling, including the responsive breakpoints |
-| `script.js` | Mobile menu, scroll reveal, footer year |
-| `images/` | Photographs and the social link-preview card |
-| `robots.txt`, `sitemap.xml` | Search engine directives |
-| `favicon.svg`, `apple-touch-icon.png` | Site icons |
+```
+index.html    everything: content, meta tags, structured data
+styles.css    all styling and the breakpoints
+script.js     mobile menu, scroll reveal, footer year
+images/       photos, figures, and the link-preview card
+```
 
-## Local preview
+To work on it locally:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000.
+GitHub Pages rebuilds a minute or so after a push to `main`. Filenames don't change
+between updates, so hard-refresh or you'll be looking at the cached version and
+wondering why nothing happened.
 
-Changes are live on https://mdakkasali.github.io/ about a minute after a push
-to `main`. Filenames stay stable across updates, so hard-refresh
-(<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>) when checking a change.
-
-## Updating content
-
-**Publications and presentations** are curated, not generated. Verify author
-lists and DOIs against the published record — the Crossref API
-(`https://api.crossref.org/works/<DOI>`) returns the authoritative byline —
-rather than copying from a CV or profile page, which drift.
-
-**Images** go in `images/`. Keep each `<img>` tag's `width` and `height`
-attributes matching the file's real pixel dimensions so the browser reserves
-the correct space while loading. Save photographs without chroma subsampling;
-the default softens fine detail and mottles out-of-focus backgrounds.
-
-**`images/og-card.jpg`** (1200×630) is the preview card shown when the URL is
-shared on LinkedIn, X, or Slack. Regenerate it if the portrait or titles
-change, and re-run the URL through each platform's cache validator afterwards.
-
-**Accessibility and robustness** are load-bearing, not decoration: the reveal
-animation is gated behind a `js` class so the page stays readable without
-JavaScript, and body text meets WCAG AA contrast against every background it
-sits on. Preserve both when editing.
+One rule I hold myself to: every publication and author name on the site gets
+checked against the published record before it goes up. I've been burned by
+co-author names copied from a CV that had drifted.
