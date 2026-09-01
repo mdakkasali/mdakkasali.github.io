@@ -111,9 +111,6 @@ h3 { line-height: 1.25; }
 .publication-summary { max-width: 690px; margin: 16px 0 0; color: var(--muted); }
 .text-link { color: var(--green); font-weight: 700; text-underline-offset: 5px; }
 
-.image-band { max-width: var(--shell); margin: 0 auto 6px; overflow: hidden; border-radius: var(--radius); box-shadow: 0 16px 42px rgba(10, 54, 40, .12); }
-.image-band img { width: 100%; height: clamp(120px, 16vw, 200px); object-fit: cover; }
-
 .research-project { margin: 0 0 26px; }
 .research-project h3 { max-width: 620px; margin-bottom: 10px; font-size: clamp(1.5rem, 3vw, 2.1rem); }
 .research-project > p:not(.card-label) { max-width: 620px; margin: 0; color: var(--muted); font-size: 1.05rem; }
