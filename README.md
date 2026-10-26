@@ -9,11 +9,8 @@ brings together my research, publications, presentations, teaching, and recent n
 
 ## Design
 
-The site is a single page of hand-written HTML and CSS, with a short script for the
-mobile menu and scroll effects. There is no framework and no build step, so the source
-stays readable and the site loads quickly on any connection. It is responsive down to
-phone width, remains readable with JavaScript disabled, and keeps body text within WCAG AA
-contrast.
+The site is built with plain HTML and CSS and hosted on GitHub Pages. It works on phones
+and stays readable with JavaScript turned off.
 
 ## Structure
 
