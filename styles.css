@@ -124,10 +124,10 @@ h3 { line-height: 1.25; }
 .science-card figcaption { padding: 16px 18px 20px; color: rgba(255, 255, 255, .78); font-size: .82rem; line-height: 1.5; }
 .science-card figcaption strong { display: block; margin-bottom: 6px; color: var(--lime); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 
-.research-figure { margin: 0 0 22px; overflow: hidden; border-radius: var(--radius); box-shadow: 0 16px 42px rgba(10, 54, 40, .14); }
-.research-figure img { width: 100%; height: auto; background: #000; }
-.research-figure figcaption { padding: 22px 26px; background: var(--green-dark); color: rgba(255, 255, 255, .78); font-size: .9rem; line-height: 1.55; }
-.research-figure figcaption strong { display: block; margin-bottom: 6px; color: var(--lime); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.research-figure, .gallery-feature { margin: 0 0 22px; overflow: hidden; border-radius: var(--radius); box-shadow: 0 16px 42px rgba(10, 54, 40, .14); }
+.research-figure img, .gallery-feature img { width: 100%; height: auto; background: #000; }
+.research-figure figcaption, .gallery-feature figcaption { padding: 22px 26px; background: var(--green-dark); color: rgba(255, 255, 255, .78); font-size: .9rem; line-height: 1.55; }
+.research-figure figcaption strong, .gallery-feature figcaption strong { display: block; margin-bottom: 6px; color: var(--lime); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .research-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 .research-card { position: relative; min-height: 330px; padding: 38px; border-radius: var(--radius); background: rgba(255, 255, 255, .68); border: 1px solid rgba(10, 92, 66, .12); }
 .research-card.featured { grid-column: span 2; display: grid; grid-template-columns: 90px 1fr; min-height: auto; background: var(--green-dark); color: var(--white); }
@@ -152,7 +152,7 @@ h3 { line-height: 1.25; }
 .latest-badge { display: inline-flex; margin-right: 10px; padding: 5px 9px; border-radius: 999px; background: var(--green); color: var(--white); font-size: .67rem; letter-spacing: .08em; }
 
 .gallery-section { background: var(--white); }
-.gallery-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 260px; gap: 18px; }
+.gallery-grid { display: grid; grid-auto-flow: dense; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 260px; gap: 18px; }
 .gallery-card { grid-column: span 4; position: relative; margin: 0; overflow: hidden; border-radius: var(--radius); background: var(--green-dark); box-shadow: 0 16px 42px rgba(10, 54, 40, .12); }
 .gallery-card-wide { grid-column: span 8; }
 .gallery-card-tall { grid-row: span 2; }
@@ -187,8 +187,8 @@ h3 { line-height: 1.25; }
 .recognition { background: #efe9dc; }
 .recognition-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: center; }
 .recognition-image { position: relative; }
-.recognition-image img { width: 100%; max-height: 680px; object-fit: cover; object-position: center top; border-radius: var(--radius); box-shadow: var(--shadow); }
-.recognition-image p { position: absolute; right: -22px; bottom: 24px; max-width: 250px; margin: 0; padding: 15px 18px; background: var(--white); border-radius: 14px; font-size: .83rem; font-weight: 700; }
+.recognition-image img { width: 100%; height: auto; max-height: 680px; object-fit: cover; object-position: center top; border-radius: var(--radius); box-shadow: var(--shadow); }
+.recognition-image p { display: inline-block; margin: 14px 0 0; padding: 15px 18px; background: var(--white); border-radius: 14px; font-size: .83rem; font-weight: 700; }
 .recognition-lede { color: var(--muted); font-size: 1.08rem; }
 .award-list { padding: 0; margin: 32px 0 0; list-style: none; border-top: 1px solid var(--line); }
 .award-list li { display: grid; grid-template-columns: 65px 1fr; gap: 18px; padding: 15px 0; border-bottom: 1px solid var(--line); }
@@ -258,7 +258,7 @@ h3 { line-height: 1.25; }
   .science-strip { grid-template-columns: 1fr; }
   .research-card.featured { grid-column: auto; grid-template-columns: 1fr; }
   .research-card { min-height: auto; padding: 30px; }
-  .research-figure figcaption { padding: 18px 20px; }
+  .research-figure figcaption, .gallery-feature figcaption { padding: 18px 20px; }
   .heading-row { display: block; }
   .heading-row .text-link { display: inline-block; margin-top: 20px; }
   .publication { grid-template-columns: 1fr; gap: 8px; }
