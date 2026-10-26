@@ -250,7 +250,7 @@ h3 { line-height: 1.25; }
 }
 
 @media (max-width: 720px) {
-  h1 { font-size: clamp(3.1rem, 15vw, 4.9rem); }
+  h1 { font-size: clamp(2.4rem, 13.5vw, 4.9rem); }
   .section { padding: 82px 0; }
   .hero { padding-top: 50px; }
   .hero-meta { display: grid; gap: 4px; }
