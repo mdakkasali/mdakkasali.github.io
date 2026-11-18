@@ -1,6 +1,6 @@
 # mdakkasali.github.io
 
-Source for my academic website, **[mdakkasali.github.io](https://mdakkasali.github.io/)**.
+Source for my academic website, **[akkasali.com](https://akkasali.com/)**.
 
 I am a PhD candidate in the Department of Pathology at the University of Alabama at
 Birmingham, working in the [Tyrrell Lab](https://sites.uab.edu/tyrrelllab/) on how
